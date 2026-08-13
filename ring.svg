@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LifeCheck ring mark, web use.
+
+  This is assets/lifecheck-icon-1024.svg with the squircle background removed.
+  The <rect> in the master file exists because iOS needs an opaque app icon it
+  can clip to a squircle. On a web page that same rect reads as an app icon
+  pasted onto the layout rather than as a logo, so it is dropped here and the
+  ring sits directly on the page background.
+
+  Geometry, gradient stops and the 85% arc are unchanged from the master, so
+  this stays in sync with what ships on the home screen. The viewBox is tightened
+  to the ring's bounding box (stroke included) so the mark centres on its own
+  optical middle instead of inside 1024 points of mostly empty canvas.
+
+    ring radius 364, stroke 91  ->  outer radius 409.5
+    bounds: 512 +/- 409.5  =  102.5 .. 921.5   (819 x 819)
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="819" height="819"
+     viewBox="102.5 102.5 819 819"
+     shape-rendering="geometricPrecision">
+  <defs>
+    <linearGradient id="dawnRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#F59E0B" />
+      <stop offset="22%"  stop-color="#F59E0B" />
+      <stop offset="38%"  stop-color="#D89318" />
+      <stop offset="50%"  stop-color="#9AAA28" />
+      <stop offset="62%"  stop-color="#3FA055" />
+      <stop offset="80%"  stop-color="#22C36B" />
+      <stop offset="100%" stop-color="#4ADE80" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ring track. currentColor so the page can tint it per theme: the master
+       uses 30% primary green, which is nearly invisible on a dark page. -->
+  <circle cx="512" cy="512" r="364"
+          fill="none"
+          stroke="currentColor"
+          stroke-opacity="0.30"
+          stroke-width="91" />
+
+  <!-- Progress arc, 85% of circumference, starting at 12 o'clock. -->
+  <circle cx="512" cy="512" r="364"
+          fill="none"
+          stroke="url(#dawnRing)"
+          stroke-width="91"
+          stroke-linecap="round"
+          stroke-dasharray="1944.66 2287.83"
+          transform="rotate(-90 512 512)" />
+</svg>
