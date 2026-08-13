@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LifeCheck wordmark — light mode.
+  Font: Plus Jakarta Sans 700. Tracking -0.03em.
+  "Life" #0A2E1A,  "Check" #16A34A.
+
+  This SVG embeds text that references Plus Jakarta Sans by family
+  name. Consumers that don't have the font installed (e.g. a renderer
+  rasterising via librsvg with no font fallback) will substitute a
+  system font and the spacing will be wrong. For bulletproof marketing
+  assets, convert this to outlines via the design tool of your choice
+  (Figma → "Outline stroke", Illustrator → "Create outlines").
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="480" height="96"
+     viewBox="0 0 480 96"
+     shape-rendering="geometricPrecision">
+  <text x="0" y="72"
+        font-family="'Plus Jakarta Sans', 'PlusJakartaSans', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700"
+        font-size="72"
+        letter-spacing="-2.16"
+        fill="#0A2E1A">Life<tspan fill="#16A34A">Check</tspan></text>
+</svg>
