@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VNKNWSJN4W.app.lifecheck.mobile"],
+        "components": [
+          { "/": "/", "?": { "ref": "?*" }, "comment": "referral links — thelifecheckapp.com?ref=<uid>" },
+          { "/": "/task/*" },
+          { "/": "/programs" },
+          { "/": "/programs/*" },
+          { "/": "/weekly-review" },
+          { "/": "/upgrade" },
+          { "/": "/settings" },
+          { "/": "/tasks" },
+          { "/": "/stats" },
+          { "/": "/friends" },
+          { "/": "/calendar" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["VNKNWSJN4W.app.lifecheck.mobile"]
+  }
+}
